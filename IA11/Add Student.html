@@ -1,0 +1,222 @@
+<?php
+
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $dbpass="";
+ $db = "student info";
+
+
+ $db= new mysqli("localhost", $dbuser, $dbpass,$db) or die("Connect failed:");
+ if(isset($_POST['SUBMIT']){
+  $Surname=mysqli_real_escape_string($db,$_POST['Surname']);
+  $Othernames=mysqli_real_escape_string($db,$_POST['Othernames']);
+  $firstname=mysqli_real_escape_string($db,$_POST['firstname']);
+  $Date of Birth=mysqli_real_escape_string($db,$_POST['Date of Birth']);
+  $Place of Birth=mysqli_real_escape_string($db,$_POST['Place of Birth']);
+  $Phone number=mysqli_real_escape_string($db,$_POST['Phone Number']);
+  $Email Address=mysqli_real_escape_string($db,$_POST['Email Address']);
+  $Mothers Name=mysqli_real_escape_string($db,$_POST['Mothers Name']);
+  $Mothers Number=mysqli_real_escape_string($db,$_POST['Mothers Number']);
+  $Fathers Name=mysqli_real_escape_string($db,$_POST['Fathers Name']);
+  $Fathers Number=mysqli_real_escape_string($db,$_POST['Fathers Number']);
+
+  $Nationality=mysqli_real_escape_string($db,$_POST['Nationality']);
+  $Gender=mysqli_real_escape_string($db,$_POST['Gender']);
+  $Weight=mysqli_real_escape_string($db,$_POST['Weight']);
+  $Height=mysqli_real_escape_string($db,$_POST['Height']);
+
+  $sqli = "INSERT Into register (Surnname, Othernames,firstname,Date Of Birth,Place of Birth,Phone Number,Email Address,Mothers Name,Mothers Number,Fathers Name,Fathers Number,Nationality,Gender,Height,Weight")
+  my sqlite_query($db,$sql);
+             $SESSION['message'] = "Student Add Successful"
+             header("location:view.php");
+
+ }
+
+?>
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gee Gee</title>
+        <link href ="studs.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css" rel="">
+
+    </head>
+    <body>
+    <div class="row gee">
+        <div class="col">
+            <h1>Student Portal</h1>
+
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <textarea class="search" rows="2px" cols="50px">Search here</textarea>
+
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+    <div class="row bee">
+        <div class="col-3 see ">
+            <p></p><br><br>
+            <button  class=" bt">Home</button><br><br><br><br>
+            <button class="bt" onclick="location.href='Add Student.html'">Add Student</button><br><br><br><br>
+            <button class=" bt">Contact</button><br><br><br><br>
+
+        </div>
+        <div class="col-9">
+            <form id="registrationForm" action="" method="post">
+                <table style="float: left;" border="0" cellpadding="5px" cellspacing="5px" width="230">
+                        <thread>
+                        <tr>
+
+                        </tr>
+                    </thread>
+
+                    <tr>
+                        <td>
+                            <label for="sname" >Surname: </label>
+                            <input type="text" placeholder="Enter Surname" name="sname" id="sname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="oname" >Other Names: </label>
+                            <input type="text" placeholder="Enter First Name" name="oname" id="oname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fname" >FirstName: </label>
+                            <input type="text" placeholder="Enter First Name" name="sfname" id="fname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="dob" >Date Of Birth: </label>
+                            <input type="date" placeholder="Enter Date Of Birth" name="dob" id="dob">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pob" >Place Of Birth: </label>
+                            <input type="text" placeholder="Enter Place Of Birth" name="pob" id="pob">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pno" >Phone No: </label>
+                            <input type="number" placeholder="Enter Your Phone No" name="phoneno" id="pno">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="eadd">Email Address: </label>
+                            <input type="email" placeholder="Email Address" name="eadd" id="eadd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="add">Address: </label>
+                            <input type="text" placeholder="Enter Address" name="add" id="add">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mname" >Mothers Name: </label>
+                            <input type="text" placeholder="Enter Mothers Name" name="mname" id="mname">
+                        </td>
+                    </tr>
+
+
+
+
+
+            <form id="registrationForm" action="" method="post">
+                <div class="col-9">
+
+                <table style="float: right"  border="0" cellpadding="5px" cellspacing="5px" width="230">
+                    <div class="col>
+                    <thread>
+                        <tr>
+                            <th>   </th>
+                        </tr>
+                    </thread>
+                    <tr>
+                        <td>
+                            <label for="mno" >Mothers Tel No: </label><br>
+                            <input type="number" placeholder="Enter Mothers Tel No" name="mno" id="mno">
+                    </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <tabel for="nat">Nationality: </table><br>
+                            <input type="text" placeholder="Enter Your Nationality" name="nat" id="nat">
+                        </td>
+
+                    </tr>
+                    <p></p>
+                    <tr>
+                        <td>
+                            <label for="gen">Male: </label>
+                            <input type="checkbox" placeholder="Male" id="gen">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gen">Female: </label>
+                            <input type="checkbox" placeholder="Female " id="gen">
+                        </td>
+                    </tr>
+                    <p></p>
+                    <tr>
+                        <td>
+                            <label for="wt">Weight: </label><br>
+                            <input type="number" id="wt">
+                        </td>
+                        <p></p>
+                    <tr>
+                        <td>
+                            <label for="ht">Height: </label><br>
+                            <input type="number" id="ht">
+                        </td>
+                    </tr>
+                    <p></p>
+
+                    <tr>
+                        <td>
+                            <button name="SUBMIT" type="Submit" id="btnsub">Submit here</button>
+                        </td>
+                    </tr>
+                    </div>
+                </table>
+                </form>
+                  </div>
+
+
+
+        </div>
+
+    </div>
+
+
+    </body>
+    </html>
+
+
+</body>
+</html>

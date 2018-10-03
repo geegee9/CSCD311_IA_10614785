@@ -1,0 +1,44 @@
+*body{
+}
+
+.gee{
+    height: auto;
+    background-color: lightseagreen;
+    font-family: Tahoma;
+}
+.bee{
+    height: 100vh;
+
+}
+.see{
+
+background-color: lightblue;
+}
+
+
+.bt{
+    background-color: whitesmoke;
+    border: 12pc;
+    color: black;
+    width: 100%;
+    height:40px;
+    border-radius: 5px;
+
+
+}
+.search{
+    background-color: aliceblue;
+    border-color: #23272b;
+
+}
+th{
+    font: bold 14px Tahoma;
+}
+button{
+    background :rgba(0,164,164,0.6);
+    border: white;
+    color:#000000;
+    height:25px;
+    width: 150px;
+    border-radius:3px;
+}

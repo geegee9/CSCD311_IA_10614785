@@ -1,0 +1,38 @@
+body{
+    background-color: #D2691E;
+    background-image:url("bridge.jpg");
+    width: 1vh;
+    height: 1vh;
+    background-position: center;
+
+}
+
+.rbox{
+    width:250px;
+    height:200px;
+    border : thin solid #000000 ;
+    box-shadow : 2px 3px rgba(164,164,164,0.8);
+    margin:auto;
+    background:grey;
+    align-content: center;
+    ali
+}
+
+button{
+    background :rgba(164,164,164,164);
+    border: #6b8e23;
+    color:#fff;
+    height:25px;
+    width: 230px;
+    border-radius:3px;
+}
+
+th{
+    font: bold 15px "Tahoma";
+}
+tr{
+    font: normal 15px "Trebuchet MS";
+}
+#msg{
+    font : normal 11px "Tahoma";
+}
